@@ -1,5 +1,6 @@
-from django.db import models, transaction
+from django.db import transaction
 from django.contrib.auth.models import User
+from django.contrib.gis.db import models
 from django import VERSION as DJANGO_VERSION
 from django.conf import settings
 

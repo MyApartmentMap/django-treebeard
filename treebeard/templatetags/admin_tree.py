@@ -7,9 +7,9 @@ nodes change list - @jjdelc
 
 from os.path import join
 
-from django.db import models
 from django.conf import settings
 from django.contrib.admin.views.main import EMPTY_CHANGELIST_VALUE
+from django.contrib.gis.db import models
 from django.template import Library
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.admin.templatetags.admin_list import result_hidden_fields, result_headers, _boolean_icon

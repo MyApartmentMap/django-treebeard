@@ -4,9 +4,10 @@ import os
 from django.contrib.admin.options import ModelAdmin
 from django.contrib.admin.sites import AdminSite
 from django.test import TestCase
-from django.db import models, transaction
+from django.db import transaction
 from django.contrib.auth.models import User
-from django.db.models import Q
+from django.contrib.gis.db import models
+from django.contrib.gis.db.models import Q
 from django.conf import settings
 from django import VERSION as DJANGO_VERSION
 from django.utils.functional import wraps

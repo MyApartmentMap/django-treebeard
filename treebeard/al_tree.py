@@ -1,13 +1,14 @@
 "Adjacency List"
 
+from django.contrib.gis.db import models
 from django.core import serializers
-from django.db import models, transaction, connection
+from django.db import transaction, connection
 
 from treebeard.models import Node
 from treebeard.exceptions import InvalidMoveToDescendant
 
 
-class AL_NodeManager(models.Manager):
+class AL_NodeManager(models.GeoManager):
     "Custom manager for nodes."
 
     def get_query_set(self):

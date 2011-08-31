@@ -3,8 +3,9 @@
 import operator
 
 from django import VERSION as DJANGO_VERSION
-from django.db.models import Q
-from django.db import models, transaction
+from django.contrib.gis.db import models
+from django.contrib.gis.db.models import Q
+from django.db import transaction
 from django.conf import settings
 
 from treebeard.exceptions import InvalidPosition, MissingNodeOrderBy

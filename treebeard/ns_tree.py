@@ -2,9 +2,10 @@
 
 import operator
 
-from django.db.models import Q
+from django.contrib.gis.db import models
+from django.contrib.gis.db.models import Q
 from django.core import serializers
-from django.db import models, transaction, connection
+from django.db import transaction, connection
 
 from treebeard.models import Node
 from treebeard.exceptions import InvalidMoveToDescendant
@@ -71,7 +72,7 @@ class NS_NodeQuerySet(models.query.QuerySet):
         transaction.commit_unless_managed()
 
 
-class NS_NodeManager(models.Manager):
+class NS_NodeManager(models.GeoManager):
     """ Custom manager for nodes.
     """
 
