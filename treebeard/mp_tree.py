@@ -12,7 +12,7 @@ from treebeard.models import Node
 from treebeard.exceptions import InvalidMoveToDescendant, PathOverflow
 
 
-class MP_NodeQuerySet(models.query.QuerySet):
+class MP_NodeQuerySet(models.query.GeoQuerySet):
     """
     Custom queryset for the tree node manager.
 
